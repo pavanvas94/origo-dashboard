@@ -1,0 +1,1100 @@
+/* ===========================================
+   Oil Price Tracker — Premium Dark Theme
+   =========================================== */
+
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --bg-primary: #0a0e17;
+    --bg-secondary: #111827;
+    --bg-card: #1a2234;
+    --bg-card-hover: #1e2a40;
+    --bg-glass: rgba(26, 34, 52, 0.7);
+
+    --text-primary: #f0f4f8;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --accent-green: #34d399;
+    --accent-amber: #f59e0b;
+    --accent-blue: #60a5fa;
+    --accent-purple: #a78bfa;
+    --accent-rose: #fb7185;
+
+    --anveshan-color: #00584b;
+    --anveshan-light: #34d399;
+    --gramiyaa-color: #154734;
+    --gramiyaa-light: #4ade80;
+    --twobrothers-color: #78350f;
+    --twobrothers-light: #fbbf24;
+
+    --border-subtle: rgba(148, 163, 184, 0.08);
+    --border-glow: rgba(52, 211, 153, 0.2);
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 40px rgba(52, 211, 153, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ─── Animated Background Blobs ─── */
+.bg-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    animation: blobFloat 20s ease-in-out infinite;
+}
+
+.blob-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--accent-green);
+    top: -200px;
+    right: -100px;
+    animation-delay: 0s;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-amber);
+    bottom: 20%;
+    left: -150px;
+    animation-delay: -7s;
+}
+
+.blob-3 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-purple);
+    top: 50%;
+    right: 10%;
+    animation-delay: -14s;
+}
+
+@keyframes blobFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(30px, -50px) scale(1.1); }
+    50% { transform: translate(-20px, 20px) scale(0.95); }
+    75% { transform: translate(40px, 30px) scale(1.05); }
+}
+
+/* ─── Container ─── */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ─── Header ─── */
+header {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 14, 23, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-icon {
+    flex-shrink: 0;
+}
+
+.site-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-green), var(--accent-amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+.site-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.header-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.last-updated {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--border-subtle);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+}
+
+/* ─── Stats Grid ─── */
+#hero-stats {
+    padding: 48px 24px 24px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s ease-out backwards;
+    animation-delay: calc(var(--delay) * 100ms);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-glow);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--text-primary), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── Filter Bar ─── */
+#filter-section {
+    padding: 32px 24px 16px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 6px;
+    background: var(--bg-card);
+    border-radius: 100px;
+    border: 1px solid var(--border-subtle);
+    width: fit-content;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.2), rgba(245, 158, 11, 0.15));
+    color: var(--accent-green);
+    box-shadow: inset 0 0 0 1px rgba(52, 211, 153, 0.3);
+}
+
+/* ─── Oil Sections ─── */
+#main-content {
+    padding: 32px 24px 48px;
+}
+
+.oil-section {
+    margin-bottom: 48px;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.oil-section.hidden {
+    display: none;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.section-icon {
+    font-size: 2.2rem;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+}
+
+.section-header h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-top: 2px;
+}
+
+/* ─── Price Cards ─── */
+.price-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.price-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.price-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, transparent);
+    transition: background 0.3s ease;
+}
+
+.price-card.brand-anveshan::before {
+    background: linear-gradient(90deg, var(--anveshan-color), var(--anveshan-light));
+}
+
+.price-card.brand-gramiyaa::before {
+    background: linear-gradient(90deg, var(--gramiyaa-color), var(--gramiyaa-light));
+}
+
+.price-card.brand-twobrothers::before {
+    background: linear-gradient(90deg, var(--twobrothers-color), var(--twobrothers-light));
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-card);
+    background: var(--bg-card-hover);
+}
+
+.price-card.best-price {
+    border-color: rgba(52, 211, 153, 0.25);
+    box-shadow: 0 0 30px rgba(52, 211, 153, 0.06);
+}
+
+.best-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--accent-green), #10b981);
+    color: #022c22;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.brand-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.brand-badge.anveshan {
+    background: rgba(0, 88, 75, 0.2);
+    color: var(--anveshan-light);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.brand-badge.gramiyaa {
+    background: rgba(21, 71, 52, 0.2);
+    color: var(--gramiyaa-light);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.brand-badge.twobrothers {
+    background: rgba(120, 53, 15, 0.2);
+    color: var(--twobrothers-light);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.card-type {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Price Display */
+.price-display {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.currency {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.price-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.price-unit {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-left: 4px;
+}
+
+.unavailable-text {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Price Details */
+.price-details {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.detail-price {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.detail-row.highlight {
+    background: rgba(52, 211, 153, 0.06);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    margin-top: 4px;
+}
+
+.tag-premium {
+    background: rgba(251, 191, 36, 0.15);
+    color: var(--accent-amber);
+    font-size: 0.72rem;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Card Footer */
+.card-footer {
+    padding-top: 4px;
+}
+
+.shop-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent-green);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    gap: 4px;
+}
+
+.shop-link:hover {
+    color: var(--accent-amber);
+    gap: 8px;
+}
+
+/* Unavailable card */
+.price-card.unavailable {
+    opacity: 0.5;
+}
+
+/* ─── Comparison Table ─── */
+#comparison-table {
+    padding: 0 24px 48px;
+}
+
+.table-header-area h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.table-subtitle {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.brand-col {
+    text-align: center;
+}
+
+.brand-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.anveshan-dot { background: var(--anveshan-light); }
+.gramiyaa-dot { background: var(--gramiyaa-light); }
+.tb-dot { background: var(--twobrothers-light); }
+
+td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.best-cell {
+    color: var(--accent-green);
+    font-weight: 700;
+    position: relative;
+}
+
+.na-cell {
+    color: var(--text-muted);
+}
+
+.oil-emoji {
+    margin-right: 8px;
+}
+
+.winner-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 100px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.winner-badge.gramiyaa {
+    background: rgba(74, 222, 128, 0.12);
+    color: var(--gramiyaa-light);
+}
+
+.winner-badge.anveshan {
+    background: rgba(52, 211, 153, 0.12);
+    color: var(--anveshan-light);
+}
+
+/* ─── Marketplace Channel Prices ─── */
+#marketplace-prices {
+    padding: 0 24px 48px;
+}
+
+#marketplace-prices > .section-header {
+    margin-bottom: 8px;
+}
+
+.channel-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: rgba(245, 158, 11, 0.06);
+    border: 1px solid rgba(245, 158, 11, 0.12);
+    border-radius: var(--radius-md);
+    padding: 12px 18px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.channel-brand-block {
+    margin-bottom: 24px;
+}
+
+.channel-brand-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.channel-brand-tag {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.channel-table-wrapper {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    overflow-x: auto;
+}
+
+.channel-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.channel-table thead {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.channel-table th {
+    padding: 14px 16px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+}
+
+.channel-table th:first-child {
+    text-align: left;
+}
+
+.channel-table td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.92rem;
+    white-space: nowrap;
+}
+
+.channel-table td:first-child {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.channel-table tr:last-child td {
+    border-bottom: none;
+}
+
+.channel-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.channel-table .ch-official {
+    color: var(--text-muted);
+    font-weight: 400;
+    position: relative;
+}
+
+.channel-table .ch-official::after {
+    content: 'MRP';
+    display: block;
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
+}
+
+.channel-table .best-cell {
+    color: var(--accent-green);
+    font-weight: 700;
+    background: rgba(52, 211, 153, 0.04);
+}
+
+.ch-icon {
+    margin-right: 4px;
+    font-size: 0.9rem;
+}
+
+/* ─── Brand Link Cards ─── */
+#brand-cards {
+    padding: 0 24px 48px;
+
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.brand-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.brand-link-card {
+    position: relative;
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.brand-link-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: var(--radius-lg);
+}
+
+.anveshan-card::after {
+    background: radial-gradient(circle at top right, rgba(52, 211, 153, 0.08), transparent 60%);
+}
+
+.gramiyaa-card::after {
+    background: radial-gradient(circle at top right, rgba(74, 222, 128, 0.08), transparent 60%);
+}
+
+.twobrothers-card::after {
+    background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.08), transparent 60%);
+}
+
+.brand-link-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-glow);
+    box-shadow: var(--shadow-card);
+}
+
+.brand-link-card:hover::after {
+    opacity: 1;
+}
+
+.brand-link-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.brand-link-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.brand-link-card p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.coupon-code {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.coupon-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.coupon-value {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--accent-amber);
+    letter-spacing: 0.04em;
+}
+
+.coupon-desc {
+    font-size: 0.78rem;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.visit-arrow {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+}
+
+.brand-link-card:hover .visit-arrow {
+    color: var(--accent-green);
+    transform: translateX(4px);
+}
+
+/* ─── Notes ─── */
+#notes {
+    padding: 0 24px 48px;
+}
+
+.notes-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+}
+
+.notes-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+}
+
+.notes-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notes-card li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+}
+
+.notes-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+/* ─── Footer ─── */
+footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+}
+
+.footer-content p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.footer-sub {
+    font-size: 0.75rem !important;
+    margin-top: 4px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+    .price-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .brand-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        width: 100%;
+        border-radius: var(--radius-lg);
+        justify-content: center;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-title {
+        font-size: 1.25rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .price-value {
+        font-size: 2.2rem;
+    }
+
+    .table-header-area h2 {
+        font-size: 1.3rem;
+    }
+
+    th, td {
+        padding: 12px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 18px 14px;
+    }
+
+    .stat-value {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    #hero-stats {
+        padding: 32px 16px 16px;
+    }
+
+    #filter-section {
+        padding: 24px 16px 8px;
+    }
+
+    #main-content {
+        padding: 24px 16px 32px;
+    }
+}
+
+/* ─── Scroll Animations ─── */
+.oil-section,
+.stat-card,
+.brand-link-card,
+.channel-brand-block {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.oil-section.visible,
+.stat-card.visible,
+.brand-link-card.visible,
+.channel-brand-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}

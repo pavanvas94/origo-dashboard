@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cold Pressed Oil Price Tracker — Anveshan · Gramiyaa · Two Brothers</title>
+<meta content="Compare prices of cold pressed and wood pressed oils from Anveshan, Gramiyaa, and Two Brothers Organic Farms. Updated regularly with the latest prices." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Outfit:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Animated background blobs -->
+<div class="bg-blobs">
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+</div>
+<!-- Header -->
+<header id="main-header">
+<div class="container">
+<div class="header-content">
+<div class="logo-area">
+<div class="logo-icon">
+<svg fill="none" height="32" viewbox="0 0 32 32" width="32">
+<circle cx="16" cy="16" fill="none" r="14" stroke="url(#logo-grad)" stroke-width="2.5"></circle>
+<path d="M16 6 C12 10, 10 14, 10 18 C10 22, 13 26, 16 26 C19 26, 22 22, 22 18 C22 14, 20 10, 16 6Z" fill="url(#logo-grad)" opacity="0.8"></path>
+<defs>
+<lineargradient id="logo-grad" x1="0" x2="32" y1="0" y2="32">
+<stop offset="0%" stop-color="#34d399"></stop>
+<stop offset="100%" stop-color="#f59e0b"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<div>
+<h1 class="site-title">Oil Price Tracker</h1>
+<p class="site-subtitle">Cold Pressed · Wood Pressed · Organic</p>
+</div>
+</div>
+<div class="header-meta">
+<div class="last-updated">
+<span class="pulse-dot"></span>
+<span>Updated: <strong id="update-date">June 24, 2026</strong></span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Stats -->
+<section class="container" id="hero-stats">
+<div class="stats-grid">
+<div class="stat-card" style="--delay: 0">
+<div class="stat-icon">🫒</div>
+<div class="stat-value">5</div>
+<div class="stat-label">Oil Types Tracked</div>
+</div>
+<div class="stat-card" style="--delay: 1">
+<div class="stat-icon">🏪</div>
+<div class="stat-value">3</div>
+<div class="stat-label">Brands Compared</div>
+</div>
+<div class="stat-card" style="--delay: 2">
+<div class="stat-icon">🛒</div>
+<div class="stat-value">6+</div>
+<div class="stat-label">Channels Tracked</div>
+</div>
+<div class="stat-card" style="--delay: 3">
+<div class="stat-icon">📊</div>
+<div class="stat-value">50+</div>
+<div class="stat-label">Price Points
+            </div>
+</div>
+</div></section>
+<!-- Filter Tabs -->
+<section class="container" id="filter-section">
+<div class="filter-bar">
+<button class="filter-btn active" data-filter="all" id="filter-all">All Oils</button>
+<button class="filter-btn" data-filter="groundnut" id="filter-groundnut">🥜 Groundnut</button>
+<button class="filter-btn" data-filter="mustard" id="filter-mustard">🌿 Mustard</button>
+<button class="filter-btn" data-filter="coconut" id="filter-coconut">🥥 Coconut</button>
+<button class="filter-btn" data-filter="sesame" id="filter-sesame">🌾 Sesame</button>
+<button class="filter-btn" data-filter="sunflower" id="filter-sunflower">🌻 Sunflower</button>
+</div>
+</section>
+<!-- Price Comparison Cards -->
+<main class="container" id="main-content">
+<!-- Groundnut Oil -->
+<div class="oil-section" data-oil="groundnut" id="section-groundnut">
+<div class="section-header">
+<div class="section-icon">🥜</div>
+<div>
+<h2>Groundnut Oil</h2>
+<p class="section-desc">Cold pressed / Wood pressed — Rich in antioxidants, ideal for everyday Indian cooking</p>
+</div>
+</div>
+<div class="price-cards">
+<div class="price-card brand-anveshan" id="groundnut-anveshan">
+<div class="card-header">
+<div class="brand-badge anveshan">Anveshan</div>
+<div class="card-type">Wood Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">425</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>1L glass bottle</span>
+                            <span class="detail-price">₹564</span>
+                        </div>
+                        <div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹879</span>
+                        </div>
+                        <div class="detail-row"><span>5L Pack</span>
+                            <span class="detail-price">₹1,880</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://anveshan.farm" id="link-anveshan-groundnut" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-gramiyaa best-price" id="groundnut-gramiyaa"><div class="best-badge">Best Value</div>
+                    
+<div class="card-header">
+<div class="brand-badge gramiyaa">Gramiyaa</div>
+<div class="card-type">Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">385</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2 x 1L</span>
+                            <span class="detail-price">₹765</span>
+                        </div>
+                        <div class="detail-row"><span>3 x 1L</span>
+                            <span class="detail-price">₹1,125</span>
+                        </div>
+                        <div class="detail-row"><span>4 x 1L</span>
+                            <span class="detail-price">₹1,495</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://gramiyaa.com" id="link-gramiyaa-groundnut" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-twobrothers" id="groundnut-twobrothers">
+<div class="card-header">
+<div class="brand-badge twobrothers">Two Brothers</div>
+<div class="card-type">Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">425</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2L Tin</span>
+                            <span class="detail-price">₹815</span>
+                        </div>
+                        <div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹850</span>
+                        </div>
+                        <div class="detail-row"><span>5L Tin</span>
+                            <span class="detail-price">₹2,015</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://www.twobrothersindiashop.com" id="link-tb-groundnut" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Mustard Oil -->
+<div class="oil-section" data-oil="mustard" id="section-mustard">
+<div class="section-header">
+<div class="section-icon">🌿</div>
+<div>
+<h2>Mustard Oil</h2>
+<p class="section-desc">Pungent &amp; flavorful — Essential for pickles, Bengali &amp; North Indian cuisine</p>
+</div>
+</div>
+<div class="price-cards">
+<div class="price-card brand-anveshan" id="mustard-anveshan">
+<div class="card-header">
+<div class="brand-badge anveshan">Anveshan</div>
+<div class="card-type">Black Mustard · Wood Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">523</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>1L plastic bottle</span>
+                            <span class="detail-price">₹400</span>
+                        </div>
+                        <div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹718</span>
+                        </div>
+                        <div class="detail-row"><span>5L Pack</span>
+                            <span class="detail-price">₹1,632</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://anveshan.farm" id="link-anveshan-mustard" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-gramiyaa best-price" id="mustard-gramiyaa"><div class="best-badge">Best Value</div>
+                    
+<div class="card-header">
+<div class="brand-badge gramiyaa">Gramiyaa</div>
+<div class="card-type">Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">349</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2 x 1L</span>
+                            <span class="detail-price">₹678</span>
+                        </div>
+                        <div class="detail-row"><span>3 x 1L</span>
+                            <span class="detail-price">₹987</span>
+                        </div>
+                        <div class="detail-row"><span>4 x 1L</span>
+                            <span class="detail-price">₹1,276</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://gramiyaa.com" id="link-gramiyaa-mustard" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-twobrothers" id="mustard-twobrothers">
+<div class="card-header">
+<div class="brand-badge twobrothers">Two Brothers</div>
+<div class="card-type">Black Mustard · Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">395</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹790</span>
+                        </div>
+                        <div class="detail-row"><span>5L Tin</span>
+                            <span class="detail-price">₹1,885</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://www.twobrothersindiashop.com" id="link-tb-mustard" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Coconut Oil -->
+<div class="oil-section" data-oil="coconut" id="section-coconut">
+<div class="section-header">
+<div class="section-icon">🥥</div>
+<div>
+<h2>Coconut Oil</h2>
+<p class="section-desc">Virgin / Cold pressed — Premium quality for cooking, skin &amp; hair care</p>
+</div>
+</div>
+<div class="price-cards">
+<div class="price-card brand-anveshan" id="coconut-anveshan">
+<div class="card-header">
+<div class="brand-badge anveshan">Anveshan</div>
+<div class="card-type">Wood Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">976.50</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>500ml</span>
+                            <span class="detail-price">₹558</span>
+                        </div>
+                        <div class="detail-row"><span>1L plastic bottle</span>
+                            <span class="detail-price">₹883.50</span>
+                        </div>
+                        <div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹1,845</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://anveshan.farm" id="link-anveshan-coconut" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-gramiyaa best-price" id="coconut-gramiyaa"><div class="best-badge">Best Value</div>
+                    
+<div class="card-header">
+<div class="brand-badge gramiyaa">Gramiyaa</div>
+<div class="card-type">Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">749</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2 x 1L</span>
+                            <span class="detail-price">₹1,478</span>
+                        </div>
+                        <div class="detail-row"><span>3 x 1L</span>
+                            <span class="detail-price">₹2,187</span>
+                        </div>
+                        <div class="detail-row"><span>4 x 1L</span>
+                            <span class="detail-price">₹2,876</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://gramiyaa.com" id="link-gramiyaa-coconut" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-twobrothers" id="coconut-twobrothers">
+<div class="card-header">
+<div class="brand-badge twobrothers">Two Brothers</div>
+<div class="card-type">Unrefined · Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">945</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹1,775</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://www.twobrothersindiashop.com" id="link-tb-coconut" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Sesame Oil -->
+<div class="oil-section" data-oil="sesame" id="section-sesame">
+<div class="section-header">
+<div class="section-icon">🌾</div>
+<div>
+<h2>Sesame Oil</h2>
+<p class="section-desc">Black / White sesame — Rich nutty flavor, great for South Indian tempering</p>
+</div>
+</div>
+<div class="price-cards">
+<div class="price-card brand-anveshan" id="sesame-anveshan">
+<div class="card-header">
+<div class="brand-badge anveshan">Anveshan</div>
+<div class="card-type">Black Sesame · Wood Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">750</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>1L plastic bottle</span>
+                            <span class="detail-price">₹645</span>
+                        </div>
+                        <div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹1,225</span>
+                        </div>
+                        <div class="detail-row"><span>5L Pack</span>
+                            <span class="detail-price">₹2,850</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://anveshan.farm" id="link-anveshan-sesame" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-gramiyaa best-price" id="sesame-gramiyaa"><div class="best-badge">Best Value</div>
+                    
+<div class="card-header">
+<div class="brand-badge gramiyaa">Gramiyaa</div>
+<div class="card-type">Cold Pressed Sesame</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">549</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>2 x 1L</span>
+                            <span class="detail-price">₹1,078</span>
+                        </div>
+                        <div class="detail-row"><span>3 x 1L</span>
+                            <span class="detail-price">₹1,587</span>
+                        </div>
+                        <div class="detail-row"><span>4 x 1L</span>
+                            <span class="detail-price">₹2,076</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://gramiyaa.com" id="link-gramiyaa-sesame" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-twobrothers unavailable" id="sesame-twobrothers">
+<div class="card-header">
+<div class="brand-badge twobrothers">Two Brothers</div>
+<div class="card-type">Cold Pressed</div>
+</div>
+<div class="price-display"><span class="price-value unavailable-text">Not Listed</span></div>
+<div class="price-details"><div class="detail-row"><span>Check website for availability</span></div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://www.twobrothersindiashop.com" id="link-tb-sesame" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Sunflower Oil -->
+<div class="oil-section" data-oil="sunflower" id="section-sunflower">
+<div class="section-header">
+<div class="section-icon">🌻</div>
+<div>
+<h2>Sunflower Oil</h2>
+<p class="section-desc">Light &amp; heart-healthy — High in Vitamin E, great for frying &amp; baking</p>
+</div>
+</div>
+<div class="price-cards">
+<div class="price-card brand-anveshan" id="sunflower-anveshan">
+<div class="card-header">
+<div class="brand-badge anveshan">Anveshan</div>
+<div class="card-type">Wood Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">580</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>1L plastic bottle</span>
+                            <span class="detail-price">₹465.50</span>
+                        </div>
+                        <div class="detail-row"><span>2L Bottle</span>
+                            <span class="detail-price">₹879</span>
+                        </div>
+                        <div class="detail-row"><span>5L Pack</span>
+                            <span class="detail-price">₹2,086</span>
+                        </div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://anveshan.farm" id="link-anveshan-sunflower" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-gramiyaa unavailable" id="sunflower-gramiyaa">
+<div class="card-header">
+<div class="brand-badge gramiyaa">Gramiyaa</div>
+<div class="card-type">Cold Pressed Sunflower</div>
+</div>
+<div class="price-display"><span class="price-value unavailable-text">Not Listed</span></div>
+<div class="price-details"><div class="detail-row"><span>Check website for availability</span></div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://gramiyaa.com" id="link-gramiyaa-sunflower" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+<div class="price-card brand-twobrothers best-price" id="sunflower-twobrothers"><div class="best-badge">Best Value</div>
+                    
+<div class="card-header">
+<div class="brand-badge twobrothers">Two Brothers</div>
+<div class="card-type">Cold Pressed</div>
+</div>
+<div class="price-display"><span class="currency">₹</span>
+                        <span class="price-value">445</span>
+                        <span class="price-unit">/ 1L</span>
+                    </div>
+<div class="price-details"><div class="detail-row"><span>No other sizes listed</span></div></div>
+<div class="card-footer">
+<a class="shop-link" href="https://www.twobrothersindiashop.com" id="link-tb-sunflower" rel="noopener" target="_blank">Visit Store →</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Summary Comparison Table -->
+<section class="container" id="comparison-table">
+<div class="table-header-area">
+<h2>Quick Comparison <span class="table-subtitle">— 1 Litre Prices</span></h2>
+</div>
+<div class="table-wrapper">
+<table id="price-table">
+<thead>
+<tr>
+<th>Oil Type</th>
+<th class="brand-col anveshan-col">
+<span class="brand-dot anveshan-dot"></span>
+                            Anveshan
+                        </th>
+<th class="brand-col gramiyaa-col">
+<span class="brand-dot gramiyaa-dot"></span>
+                            Gramiyaa
+                        </th>
+<th class="brand-col twobrothers-col">
+<span class="brand-dot tb-dot"></span>
+                            Two Brothers
+                        </th>
+<th>Best Price</th>
+</tr>
+</thead>
+<tbody>
+<tr id="price-row-groundnut">
+<td><span class="oil-emoji">🥜</span> Groundnut</td>
+<td class="na-cell">₹425</td>
+<td class="na-cell best-cell">₹385</td>
+<td class="na-cell">₹425</td>
+<td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
+</tr>
+<tr id="price-row-mustard">
+<td><span class="oil-emoji">🌿</span> Mustard</td>
+<td class="na-cell">₹523</td>
+<td class="na-cell best-cell">₹349</td>
+<td class="na-cell">₹395</td>
+<td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
+</tr>
+<tr id="price-row-coconut">
+<td><span class="oil-emoji">🥥</span> Coconut</td>
+<td class="na-cell">₹976.50</td>
+<td class="na-cell best-cell">₹749</td>
+<td class="na-cell">₹945</td>
+<td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
+</tr>
+<tr id="price-row-sesame">
+<td><span class="oil-emoji">🌾</span> Sesame</td>
+<td class="na-cell">₹750</td>
+<td class="na-cell best-cell">₹549</td>
+<td class="na-cell na-cell">—</td>
+<td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
+</tr>
+<tr id="price-row-sunflower">
+<td><span class="oil-emoji">🌻</span> Sunflower</td>
+<td class="na-cell">₹580</td>
+<td class="na-cell na-cell na-cell">—</td>
+<td class="na-cell best-cell">₹445</td>
+<td><span class="winner-badge twobrothers">Two Brothers</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Marketplace Channel Prices -->
+<section class="container" id="marketplace-prices">
+<div class="section-header" style="margin-bottom: 8px;">
+<div class="section-icon">🛒</div>
+<div>
+<h2>Where to Buy — Marketplace Prices</h2>
+<p class="section-desc">Prices across BigBasket, Blinkit, Zepto, Swiggy Instamart, Flipkart &amp; official stores (1L unless noted)</p>
+</div>
+</div>
+<p class="channel-note">💡 Quick commerce prices are <strong>dynamic</strong> and vary by pincode. Ranges shown below are indicative — always check your local app.</p>
+<!-- Anveshan Marketplace -->
+<div class="channel-brand-block" id="channel-anveshan">
+<div class="channel-brand-header">
+<div class="brand-badge anveshan">Anveshan</div>
+<span class="channel-brand-tag">Wood Pressed Oils</span>
+</div>
+<div class="table-wrapper channel-table-wrapper">
+<table class="channel-table">
+<thead>
+<tr>
+<th>Oil</th>
+<th><span class="ch-icon">🏠</span> Official</th>
+<th><span class="ch-icon">🟢</span> BigBasket</th>
+<th><span class="ch-icon">⚡</span> Blinkit</th>
+<th><span class="ch-icon">💜</span> Zepto</th>
+<th><span class="ch-icon">🧡</span> Swiggy</th>
+<th><span class="ch-icon">🔵</span> Flipkart</th>
+</tr>
+</thead>
+<tbody>
+<tr id="channel-row-anveshan-groundnut">
+<td><span class="oil-emoji">🥜</span> Groundnut</td>
+<td class="ch-official">₹425</td>
+<td>₹379–449</td>
+<td>₹379+</td>
+<td class="best-cell">₹299–399</td>
+<td>₹399</td>
+<td>₹425–525</td>
+</tr>
+<tr id="channel-row-anveshan-mustard">
+<td><span class="oil-emoji">🌿</span> Mustard</td>
+<td class="ch-official">₹523</td>
+<td class="best-cell">₹289–349</td>
+<td>₹359</td>
+<td>₹427</td>
+<td>₹399</td>
+<td>₹450–545</td>
+</tr>
+<tr id="channel-row-anveshan-coconut">
+<td><span class="oil-emoji">🥥</span> Coconut</td>
+<td class="ch-official">₹976.50</td>
+<td class="best-cell">₹635–749</td>
+<td>₹749</td>
+<td>₹699</td>
+<td>₹799</td>
+<td>₹849–950</td>
+</tr>
+<tr id="channel-row-anveshan-sesame">
+<td><span class="oil-emoji">🌾</span> Sesame</td>
+<td class="ch-official">₹750</td>
+<td>₹549–629</td>
+<td>₹599</td>
+<td class="best-cell">₹424–549</td>
+<td>₹579</td>
+<td>₹599–750</td>
+</tr>
+<tr id="channel-row-anveshan-sunflower">
+<td><span class="oil-emoji">🌻</span> Sunflower</td>
+<td class="ch-official">₹580</td>
+<td>₹399–465</td>
+<td class="best-cell">₹379</td>
+<td>₹399</td>
+<td>₹429</td>
+<td>₹465–580</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Gramiyaa Marketplace -->
+<div class="channel-brand-block" id="channel-gramiyaa">
+<div class="channel-brand-header">
+<div class="brand-badge gramiyaa">Gramiyaa</div>
+<span class="channel-brand-tag">Cold Pressed · Shark Tank India</span>
+</div>
+<div class="table-wrapper channel-table-wrapper">
+<table class="channel-table">
+<thead>
+<tr>
+<th>Oil</th>
+<th><span class="ch-icon">🏠</span> Official</th>
+<th><span class="ch-icon">🟢</span> BigBasket</th>
+<th><span class="ch-icon">⚡</span> Blinkit</th>
+<th><span class="ch-icon">💜</span> Zepto</th>
+<th><span class="ch-icon">🧡</span> Swiggy</th>
+<th><span class="ch-icon">🔵</span> Flipkart</th>
+</tr>
+</thead>
+<tbody>
+<tr id="channel-row-gramiyaa-groundnut">
+<td><span class="oil-emoji">🥜</span> Groundnut</td>
+<td class="ch-official">₹385</td>
+<td>₹339–385</td>
+<td>₹329</td>
+<td>₹319</td>
+<td class="best-cell">₹299–349</td>
+<td>₹350–490</td>
+</tr>
+<tr id="channel-row-gramiyaa-mustard">
+<td><span class="oil-emoji">🌿</span> Mustard</td>
+<td class="ch-official">₹349</td>
+<td class="best-cell">₹303–350</td>
+<td>₹349</td>
+<td>₹396</td>
+<td>₹297–409</td>
+<td>₹375–450</td>
+</tr>
+<tr id="channel-row-gramiyaa-coconut">
+<td><span class="oil-emoji">🥥</span> Coconut</td>
+<td class="ch-official">₹749</td>
+<td>₹688–788</td>
+<td>₹699</td>
+<td>₹685</td>
+<td class="best-cell">₹560–697</td>
+<td>₹725–1,050</td>
+</tr>
+<tr id="channel-row-gramiyaa-sesame">
+<td><span class="oil-emoji">🌾</span> Sesame</td>
+<td class="ch-official">₹549</td>
+<td>₹550–600</td>
+<td>₹549</td>
+<td class="best-cell">₹500–558</td>
+<td>₹549</td>
+<td>₹600</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Two Brothers Marketplace -->
+<div class="channel-brand-block" id="channel-twobrothers">
+<div class="channel-brand-header">
+<div class="brand-badge twobrothers">Two Brothers</div>
+<span class="channel-brand-tag">Organic Farms · Premium Range</span>
+</div>
+<div class="table-wrapper channel-table-wrapper">
+<table class="channel-table">
+<thead>
+<tr>
+<th>Oil</th>
+<th><span class="ch-icon">🏠</span> Official</th>
+<th><span class="ch-icon">🟢</span> BigBasket</th>
+<th><span class="ch-icon">⚡</span> Blinkit</th>
+<th><span class="ch-icon">💜</span> Zepto</th>
+<th><span class="ch-icon">🧡</span> Swiggy</th>
+<th><span class="ch-icon">🔵</span> Flipkart</th>
+</tr>
+</thead>
+<tbody>
+<tr id="channel-row-twobrothers-groundnut">
+<td><span class="oil-emoji">🥜</span> Groundnut</td>
+<td class="ch-official">₹425</td>
+<td>₹404</td>
+<td class="best-cell">₹381–391</td>
+<td>₹399</td>
+<td>₹399</td>
+<td>₹425</td>
+</tr>
+<tr id="channel-row-twobrothers-mustard">
+<td><span class="oil-emoji">🌿</span> Mustard</td>
+<td class="ch-official">₹395</td>
+<td>₹375</td>
+<td class="best-cell">₹372</td>
+<td>₹380</td>
+<td>₹385</td>
+<td>₹395</td>
+</tr>
+<tr id="channel-row-twobrothers-coconut">
+<td><span class="oil-emoji">🥥</span> Coconut</td>
+<td class="ch-official">₹945</td>
+<td>₹899</td>
+<td>₹879</td>
+<td class="best-cell">₹637</td>
+<td>₹899</td>
+<td>₹1,200+</td>
+</tr>
+<tr id="channel-row-twobrothers-sunflower">
+<td><span class="oil-emoji">🌻</span> Sunflower</td>
+<td class="ch-official">₹445</td>
+<td>₹425</td>
+<td class="best-cell">₹400</td>
+<td>₹420</td>
+<td>₹445</td>
+<td>₹890</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Brand Quick Links -->
+<section class="container" id="brand-cards">
+<h2 class="section-title">Official Stores &amp; Discount Codes</h2>
+<div class="brand-links-grid">
+<a class="brand-link-card anveshan-card" href="https://anveshan.farm" id="brand-link-anveshan" rel="noopener" target="_blank">
+<div class="brand-link-icon">🌿</div>
+<h3>Anveshan</h3>
+<p>Wood pressed oils, A2 Ghee &amp; superfoods</p>
+<div class="coupon-code">
+<span class="coupon-label">Coupon</span>
+<span class="coupon-value">PURE15</span>
+<span class="coupon-desc">15% off</span>
+</div>
+<span class="visit-arrow">→</span>
+</a>
+<a class="brand-link-card gramiyaa-card" href="https://gramiyaa.com" id="brand-link-gramiyaa" rel="noopener" target="_blank">
+<div class="brand-link-icon">🫒</div>
+<h3>Gramiyaa</h3>
+<p>As seen on Shark Tank India · Fully traceable oils</p>
+<div class="coupon-code">
+<span class="coupon-label">Tip</span>
+<span class="coupon-value">Multipacks</span>
+<span class="coupon-desc">save more</span>
+</div>
+<span class="visit-arrow">→</span>
+</a>
+<a class="brand-link-card twobrothers-card" href="https://www.twobrothersindiashop.com" id="brand-link-twobrothers" rel="noopener" target="_blank">
+<div class="brand-link-icon">🌾</div>
+<h3>Two Brothers</h3>
+<p>Organic farms · Premium cold pressed range</p>
+<div class="coupon-code">
+<span class="coupon-label">App Code</span>
+<span class="coupon-value">APP9</span>
+<span class="coupon-desc">9% off</span>
+</div>
+<span class="visit-arrow">→</span>
+</a>
+</div>
+</section>
+<!-- Disclaimer / Notes -->
+<section class="container" id="notes">
+<div class="notes-card">
+<h3>📋 Notes &amp; Disclaimer</h3>
+<ul>
+<li>Prices are sourced from official brand websites and may differ on platforms like Amazon, Flipkart, BigBasket, Zepto, or Blinkit.</li>
+<li>All prices are for <strong>1 Litre</strong> quantities unless otherwise stated. Some brands may offer glass vs plastic bottle variants at different prices.</li>
+<li>Prices may change due to seasonal variations, promotions, or bulk ordering discounts.</li>
+<li>Two Brothers Organic Farms (TBOF) positions as a premium organic brand — their pricing reflects the premium positioning.</li>
+<li><strong>Last verified:</strong> June 24, 2026. Verify on official stores before purchase.</li>
+</ul>
+</div>
+</section>
+<!-- Footer -->
+<footer id="main-footer">
+<div class="container">
+<div class="footer-content">
+<p>Built for personal price tracking · Not affiliated with any brand</p>
+<p class="footer-sub">Prices may vary. Always verify on official websites before purchasing.</p>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
