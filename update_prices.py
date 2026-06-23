@@ -70,6 +70,33 @@ def clean_variant_title(title):
         return '15L Tin'
     return title
 
+def parse_volume_from_title(title):
+    t = title.lower()
+    
+    # Match patterns like "2 x 1L" or "2 x 1 L" or "2x1L"
+    match = re.search(r'(\d+)\s*x\s*(\d+(?:\.\d+)?)\s*(l|litre|litres|ltr|ltrs|ml)', t)
+    if match:
+        qty = float(match.group(1))
+        vol = float(match.group(2))
+        unit = match.group(3)
+        if unit == 'ml':
+            return (qty * vol) / 1000.0
+        return qty * vol
+        
+    # Match patterns like "500ml" or "500 ml" or "500g" or "500 g"
+    match = re.search(r'(\d+(?:\.\d+)?)\s*(ml|g|milliliter|milliliters)', t)
+    if match:
+        vol = float(match.group(1))
+        return vol / 1000.0
+        
+    # Match patterns like "1l" or "5l" or "2l"
+    match = re.search(r'(\d+(?:\.\d+)?)\s*(l|litre|litres|ltr|ltrs|kg)', t)
+    if match:
+        vol = float(match.group(1))
+        return vol
+        
+    return 1.0 # Default fallback
+
 def run_scraper():
     print("Starting Cold Pressed Oil Price Scraper...")
     scraped_data = {}
@@ -114,19 +141,36 @@ def run_scraper():
                                 # Fallback to first variant
                                 primary_variant = variants[0]
                         
-                        oil_info['price_1l'] = primary_variant['price'] / 100
-                        oil_info['available'] = primary_variant.get('available', True)
-                        oil_info['title'] = primary_variant.get('public_title') or primary_variant.get('name')
-                        
-                        # Process other variants for the card details
+                        # Gather all variants with volume and calculate price per litre (PPL)
+                        all_vars = []
                         for v in variants:
-                            if v['id'] != primary_variant['id']:
-                                v_title = v.get('public_title') or v.get('name')
-                                oil_info['variants'].append({
-                                    'title': clean_variant_title(v_title),
-                                    'price': v['price'] / 100,
-                                    'available': v.get('available', True)
-                                })
+                            v_title = v.get('public_title') or v.get('name')
+                            v_vol = parse_volume_from_title(v_title)
+                            v_price = v['price'] / 100
+                            all_vars.append({
+                                'id': v['id'],
+                                'title': v_title,
+                                'clean_title': clean_variant_title(v_title),
+                                'price': v_price,
+                                'volume': v_vol,
+                                'ppl': v_price / v_vol,
+                                'available': v.get('available', True),
+                                'is_primary': (v['id'] == primary_variant['id'])
+                            })
+                            
+                        # Sort all variants by price per litre (PPL) to assign value ranks
+                        all_vars = sorted(all_vars, key=lambda x: x['ppl'])
+                        for idx, v in enumerate(all_vars):
+                            v['rank'] = idx + 1
+                            
+                        prim = next(v for v in all_vars if v['is_primary'])
+                        
+                        oil_info['price_1l'] = prim['price']
+                        oil_info['available'] = prim['available']
+                        oil_info['title'] = prim['title']
+                        
+                        # Store other variants
+                        oil_info['variants'] = [v for v in all_vars if not v['is_primary']]
                                 
                         print(f"  Success: 1L price = Rs. {oil_info['price_1l']} (status: {'In stock' if oil_info['available'] else 'Out of stock'})")
                         scraped_data[brand][oil_type] = oil_info
@@ -219,13 +263,13 @@ def update_html(data):
                     price_display.append(unit_span)
                     price_display.append("\n                    ")
                     
-                # Update details rows (other variants)
+                # Update details rows (other variants with rank and ppl)
                 price_details = card_div.find('div', class_='price-details')
                 if price_details:
                     price_details.clear()
                     
                     variants = brand_data.get('variants', [])
-                    # Sort variants by price so they display logically
+                    # Sort other variants by price (or ppl) so they display logically
                     variants = sorted(variants, key=lambda x: x['price'])
                     
                     if not variants:
@@ -238,14 +282,29 @@ def update_html(data):
                         for idx, v in enumerate(variants[:3]): # Max 3 detail rows
                             row = soup.new_tag('div', attrs={'class': 'detail-row'})
                             
+                            # Clean title + Price per Litre
                             title_span = soup.new_tag('span')
-                            title_span.string = v['title']
+                            title_span.string = v['clean_title']
+                            
+                            ppl_span = soup.new_tag('span', attrs={'class': 'per-l-tag'})
+                            ppl_val = v['ppl']
+                            ppl_span.string = f"(₹{ppl_val:,.0f}/L)" if ppl_val.is_integer() else f"(₹{ppl_val:,.2f}/L)"
+                            title_span.append(ppl_span)
+                            
                             row.append(title_span)
                             row.append("\n                            ")
                             
+                            # Price + Rank Badge
                             pr_span = soup.new_tag('span', attrs={'class': 'detail-price'})
                             pr_val = v['price']
                             pr_span.string = f"₹{pr_val:,.0f}" if pr_val.is_integer() else f"₹{pr_val:,.2f}"
+                            
+                            # Rank Badge
+                            rank = v['rank']
+                            rank_badge = soup.new_tag('span', attrs={'class': f'rank-badge rank-{rank}'})
+                            rank_badge.string = f"#{rank}"
+                            pr_span.append(rank_badge)
+                            
                             row.append(pr_span)
                             row.append("\n                        ")
                             
