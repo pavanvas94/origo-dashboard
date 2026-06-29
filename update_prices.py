@@ -353,8 +353,8 @@ def update_html(data):
         for idx, brand in enumerate(brands):
             cell = cells[idx + 1]
             cell.clear()
-            # remove best-cell class
-            cell.attrs['class'] = [c for c in cell.attrs.get('class', []) if c != 'best-cell']
+            # remove best-cell and na-cell classes to prevent accumulation
+            cell.attrs['class'] = [c for c in cell.attrs.get('class', []) if c not in ['best-cell', 'na-cell']]
             
             bd = data.get(brand, {}).get(oil_type)
             if bd and bd.get('price_1l') is not None:

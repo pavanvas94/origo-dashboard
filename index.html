@@ -45,6 +45,10 @@
 <span class="pulse-dot"></span>
 <span>Updated: <strong id="update-date">June 29, 2026</strong></span>
 </div>
+<button class="refresh-btn" id="refresh-btn" title="Manual update">
+<span class="refresh-icon">🔄</span>
+<span class="refresh-text">Refresh</span>
+</button>
 </div>
 </div>
 </div>
@@ -472,37 +476,37 @@
 <tbody>
 <tr id="price-row-groundnut">
 <td><span class="oil-emoji">🥜</span> Groundnut</td>
-<td class="na-cell">₹425</td>
-<td class="na-cell best-cell">₹385</td>
-<td class="na-cell">₹425</td>
+<td class="">₹425</td>
+<td class="best-cell">₹385</td>
+<td class="">₹425</td>
 <td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
 </tr>
 <tr id="price-row-mustard">
 <td><span class="oil-emoji">🌿</span> Mustard</td>
-<td class="na-cell">₹523</td>
-<td class="na-cell best-cell">₹349</td>
-<td class="na-cell">₹395</td>
+<td class="">₹523</td>
+<td class="best-cell">₹349</td>
+<td class="">₹395</td>
 <td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
 </tr>
 <tr id="price-row-coconut">
 <td><span class="oil-emoji">🥥</span> Coconut</td>
-<td class="na-cell">₹976.50</td>
-<td class="na-cell best-cell">₹729</td>
-<td class="na-cell">₹945</td>
+<td class="">₹976.50</td>
+<td class="best-cell">₹729</td>
+<td class="">₹945</td>
 <td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
 </tr>
 <tr id="price-row-sesame">
 <td><span class="oil-emoji">🌾</span> Sesame</td>
-<td class="na-cell">₹750</td>
-<td class="na-cell best-cell">₹549</td>
-<td class="na-cell na-cell na-cell na-cell na-cell na-cell na-cell na-cell na-cell">—</td>
+<td class="">₹750</td>
+<td class="best-cell">₹549</td>
+<td class="na-cell">—</td>
 <td><span class="winner-badge gramiyaa">Gramiyaa</span></td>
 </tr>
 <tr id="price-row-sunflower">
 <td><span class="oil-emoji">🌻</span> Sunflower</td>
-<td class="na-cell">₹580</td>
-<td class="na-cell na-cell na-cell na-cell na-cell na-cell na-cell na-cell na-cell na-cell">—</td>
-<td class="na-cell best-cell">₹445</td>
+<td class="">₹580</td>
+<td class="na-cell">—</td>
+<td class="best-cell">₹445</td>
 <td><span class="winner-badge twobrothers">Two Brothers</span></td>
 </tr>
 </tbody>
@@ -770,6 +774,44 @@
 </div>
 </div>
 </footer>
+<!-- Refresh Modal Overlay -->
+<div class="modal-overlay hidden" id="refresh-modal">
+<div class="modal-card">
+<button aria-label="Close modal" class="modal-close" id="modal-close-btn">×</button>
+<div class="modal-step" id="modal-step-token">
+<div class="modal-header">
+<div class="modal-header-icon">🔑</div>
+<h2>GitHub Authentication</h2>
+</div>
+<p class="modal-desc">To trigger a manual refresh on this private dashboard, please enter a GitHub Personal Access Token (PAT) with <strong>workflow</strong> scope.</p>
+<div class="input-group">
+<label for="github-token-input">GitHub Personal Access Token</label>
+<input autocomplete="off" id="github-token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password"/>
+<p class="input-help">The token is stored locally in your browser and is only sent directly to the official GitHub API.</p>
+</div>
+<div class="modal-actions">
+<button class="modal-btn btn-primary" id="token-submit-btn">Save &amp; Trigger</button>
+</div>
+</div>
+<div class="modal-step hidden" id="modal-step-progress">
+<div class="modal-header">
+<div class="modal-header-icon spinner">🔄</div>
+<h2>Updating Prices</h2>
+</div>
+<p class="modal-desc">Triggering the scraper workflow on GitHub Actions. This takes about 1-2 minutes.</p>
+<div class="progress-bar-container">
+<div class="progress-bar" id="refresh-progress-bar" style="width: 0%"></div>
+</div>
+<div class="status-badge" id="refresh-status-badge">Queued</div>
+<div class="console-log" id="refresh-console">
+<div class="log-line">Initializing connection...</div>
+</div>
+<div class="modal-actions">
+<button class="modal-btn btn-secondary text-danger" id="token-clear-btn">Clear Saved Token</button>
+</div>
+</div>
+</div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
