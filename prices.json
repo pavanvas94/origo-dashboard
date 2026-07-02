@@ -2,7 +2,7 @@
   "anveshan": {
     "groundnut": {
       "url": "https://www.anveshan.farm/products/wood-pressed-groundnut-oil",
-      "scraped_at": "2026-07-01T04:09:30.685949",
+      "scraped_at": "2026-07-02T03:50:43.199122",
       "price_1l": 425.0,
       "variants": [
         {
@@ -55,7 +55,7 @@
     },
     "mustard": {
       "url": "https://www.anveshan.farm/products/wood-pressed-mustard-oil",
-      "scraped_at": "2026-07-01T04:09:30.865411",
+      "scraped_at": "2026-07-02T03:50:43.364798",
       "price_1l": 523.0,
       "variants": [
         {
@@ -108,7 +108,7 @@
     },
     "coconut": {
       "url": "https://www.anveshan.farm/products/wood-pressed-coconut-oil",
-      "scraped_at": "2026-07-01T04:09:31.352653",
+      "scraped_at": "2026-07-02T03:50:43.794870",
       "price_1l": 976.5,
       "variants": [
         {
@@ -161,7 +161,7 @@
     },
     "sesame": {
       "url": "https://www.anveshan.farm/products/wood-pressed-black-sesame-oil",
-      "scraped_at": "2026-07-01T04:09:31.764858",
+      "scraped_at": "2026-07-02T03:50:44.290200",
       "price_1l": 750.0,
       "variants": [
         {
@@ -203,7 +203,7 @@
     },
     "sunflower": {
       "url": "https://www.anveshan.farm/products/sunflower-oil",
-      "scraped_at": "2026-07-01T04:09:32.082737",
+      "scraped_at": "2026-07-02T03:50:44.794422",
       "price_1l": 580.0,
       "variants": [
         {
@@ -258,16 +258,16 @@
   "gramiyaa": {
     "groundnut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-groundnut-oil",
-      "scraped_at": "2026-07-01T04:09:32.748297",
+      "scraped_at": "2026-07-02T03:50:45.387012",
       "price_1l": 385.0,
       "variants": [
         {
           "id": 40498604245121,
           "title": "5 x 1L",
           "clean_title": "5 x 1L",
-          "price": 1799.0,
+          "price": 1795.0,
           "volume": 5.0,
-          "ppl": 359.8,
+          "ppl": 359.0,
           "available": true,
           "is_primary": false,
           "rank": 1
@@ -300,7 +300,7 @@
     },
     "mustard": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-mustard-oil",
-      "scraped_at": "2026-07-01T04:09:33.356816",
+      "scraped_at": "2026-07-02T03:50:45.856309",
       "price_1l": 349.0,
       "variants": [
         {
@@ -342,7 +342,7 @@
     },
     "coconut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-coconut-oil",
-      "scraped_at": "2026-07-01T04:09:33.935519",
+      "scraped_at": "2026-07-02T03:50:46.360532",
       "price_1l": 729.0,
       "variants": [
         {
@@ -384,7 +384,7 @@
     },
     "sesame": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-sesame-oil",
-      "scraped_at": "2026-07-01T04:09:34.384403",
+      "scraped_at": "2026-07-02T03:50:46.931134",
       "price_1l": 549.0,
       "variants": [
         {
@@ -428,7 +428,7 @@
   "twobrothers": {
     "groundnut": {
       "url": "https://twobrothersindiashop.com/products/wood-pressed-organic-groundnut-peanut-oil-1litre-bottle",
-      "scraped_at": "2026-07-01T04:09:34.960876",
+      "scraped_at": "2026-07-02T03:50:47.402351",
       "price_1l": 425.0,
       "variants": [
         {
@@ -470,7 +470,7 @@
     },
     "mustard": {
       "url": "https://twobrothersindiashop.com/products/black-mustard-oil",
-      "scraped_at": "2026-07-01T04:09:35.526971",
+      "scraped_at": "2026-07-02T03:50:48.018560",
       "price_1l": 395.0,
       "variants": [
         {
@@ -501,7 +501,7 @@
     },
     "coconut": {
       "url": "https://twobrothersindiashop.com/products/coconut-oil-wood-pressed-unrefined",
-      "scraped_at": "2026-07-01T04:09:36.007216",
+      "scraped_at": "2026-07-02T03:50:48.577316",
       "price_1l": 945.0,
       "variants": [
         {
@@ -521,7 +521,7 @@
     },
     "sunflower": {
       "url": "https://twobrothersindiashop.com/products/sunflower-oil",
-      "scraped_at": "2026-07-01T04:09:36.513792",
+      "scraped_at": "2026-07-02T03:50:49.157445",
       "price_1l": 445.0,
       "variants": [],
       "available": true,
