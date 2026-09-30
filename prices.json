@@ -2,7 +2,7 @@
   "anveshan": {
     "groundnut": {
       "url": "https://www.anveshan.farm/products/wood-pressed-groundnut-oil",
-      "scraped_at": "2026-09-29T04:52:23.784709",
+      "scraped_at": "2026-09-30T04:38:30.999945",
       "price_1l": 425.0,
       "variants": [
         {
@@ -66,7 +66,7 @@
     },
     "mustard": {
       "url": "https://www.anveshan.farm/products/wood-pressed-mustard-oil",
-      "scraped_at": "2026-09-29T04:52:24.185709",
+      "scraped_at": "2026-09-30T04:38:31.421452",
       "price_1l": 450.0,
       "variants": [
         {
@@ -130,7 +130,7 @@
     },
     "coconut": {
       "url": "https://www.anveshan.farm/products/wood-pressed-coconut-oil",
-      "scraped_at": "2026-09-29T04:52:24.578844",
+      "scraped_at": "2026-09-30T04:38:31.720670",
       "price_1l": 1050.0,
       "variants": [
         {
@@ -172,7 +172,7 @@
     },
     "sesame": {
       "url": "https://www.anveshan.farm/products/wood-pressed-black-sesame-oil",
-      "scraped_at": "2026-09-29T04:52:24.918607",
+      "scraped_at": "2026-09-30T04:38:32.101655",
       "price_1l": 697.5,
       "variants": [
         {
@@ -214,7 +214,7 @@
     },
     "sunflower": {
       "url": "https://www.anveshan.farm/products/sunflower-oil",
-      "scraped_at": "2026-09-29T04:52:25.303026",
+      "scraped_at": "2026-09-30T04:38:32.493765",
       "price_1l": 522.0,
       "variants": [
         {
@@ -269,7 +269,7 @@
   "gramiyaa": {
     "groundnut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-groundnut-oil",
-      "scraped_at": "2026-09-29T04:52:25.942586",
+      "scraped_at": "2026-09-30T04:38:32.897299",
       "price_1l": 428.0,
       "variants": [
         {
@@ -311,7 +311,7 @@
     },
     "mustard": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-mustard-oil",
-      "scraped_at": "2026-09-29T04:52:26.388204",
+      "scraped_at": "2026-09-30T04:38:33.451311",
       "price_1l": 388.0,
       "variants": [
         {
@@ -353,7 +353,7 @@
     },
     "coconut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-coconut-oil",
-      "scraped_at": "2026-09-29T04:52:26.884874",
+      "scraped_at": "2026-09-30T04:38:34.155183",
       "price_1l": 810.0,
       "variants": [
         {
@@ -395,7 +395,7 @@
     },
     "sesame": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-sesame-oil",
-      "scraped_at": "2026-09-29T04:52:27.412480",
+      "scraped_at": "2026-09-30T04:38:34.620633",
       "price_1l": 610.0,
       "variants": [
         {
@@ -439,20 +439,9 @@
   "twobrothers": {
     "groundnut": {
       "url": "https://twobrothersindiashop.com/products/wood-pressed-organic-groundnut-peanut-oil-1litre-bottle",
-      "scraped_at": "2026-09-29T04:52:27.931612",
+      "scraped_at": "2026-09-30T04:38:35.084304",
       "price_1l": 465.0,
       "variants": [
-        {
-          "id": 39685020418210,
-          "title": "Tin Can - 5 Ltr",
-          "clean_title": "5L Tin",
-          "price": 2015.0,
-          "volume": 5.0,
-          "ppl": 403.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 1
-        },
         {
           "id": 45601855209634,
           "title": "Plastic Bottle 2L",
@@ -460,6 +449,17 @@
           "price": 850.0,
           "volume": 2.0,
           "ppl": 425.0,
+          "available": true,
+          "is_primary": false,
+          "rank": 1
+        },
+        {
+          "id": 39685020418210,
+          "title": "Tin Can - 5 Ltr",
+          "clean_title": "5L Tin",
+          "price": 2195.0,
+          "volume": 5.0,
+          "ppl": 439.0,
           "available": true,
           "is_primary": false,
           "rank": 2
@@ -481,7 +481,7 @@
     },
     "mustard": {
       "url": "https://twobrothersindiashop.com/products/black-mustard-oil",
-      "scraped_at": "2026-09-29T04:52:28.884499",
+      "scraped_at": "2026-09-30T04:38:35.921480",
       "price_1l": 425.0,
       "variants": [
         {
@@ -512,7 +512,7 @@
     },
     "coconut": {
       "url": "https://twobrothersindiashop.com/products/coconut-oil-wood-pressed-unrefined",
-      "scraped_at": "2026-09-29T04:52:29.417129",
+      "scraped_at": "2026-09-30T04:38:36.459305",
       "price_1l": 945.0,
       "variants": [
         {
@@ -532,7 +532,7 @@
     },
     "sunflower": {
       "url": "https://twobrothersindiashop.com/products/sunflower-oil",
-      "scraped_at": "2026-09-29T04:52:29.928879",
+      "scraped_at": "2026-09-30T04:38:36.955170",
       "price_1l": 445.0,
       "variants": [
         {
