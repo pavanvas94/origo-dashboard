@@ -1,275 +1,9 @@
 {
-  "anveshan": {
-    "groundnut": {
-      "url": "https://www.anveshan.farm/products/wood-pressed-groundnut-oil",
-      "scraped_at": "2026-10-16T03:41:34.749457",
-      "price_1l": 425.0,
-      "variants": [
-        {
-          "id": 48660280836288,
-          "title": "15L Tin Can",
-          "clean_title": "5L Tin",
-          "price": 5700.0,
-          "volume": 15.0,
-          "ppl": 380.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 1
-        },
-        {
-          "id": 43844700340416,
-          "title": "5L can",
-          "clean_title": "5L Pack",
-          "price": 2000.0,
-          "volume": 5.0,
-          "ppl": 400.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 2
-        },
-        {
-          "id": 39911571521728,
-          "title": "2L can",
-          "clean_title": "2L Bottle",
-          "price": 925.0,
-          "volume": 2.0,
-          "ppl": 462.5,
-          "available": true,
-          "is_primary": false,
-          "rank": 4
-        },
-        {
-          "id": 48703053332672,
-          "title": "5L tin can",
-          "clean_title": "5L Tin",
-          "price": 2375.0,
-          "volume": 5.0,
-          "ppl": 475.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 5
-        },
-        {
-          "id": 30393551323214,
-          "title": "1L glass bottle",
-          "clean_title": "1L glass bottle",
-          "price": 525.0,
-          "volume": 1.0,
-          "ppl": 525.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 6
-        }
-      ],
-      "available": true,
-      "title": "1L plastic bottle"
-    },
-    "mustard": {
-      "url": "https://www.anveshan.farm/products/wood-pressed-mustard-oil",
-      "scraped_at": "2026-10-16T03:41:35.083691",
-      "price_1l": 450.0,
-      "variants": [
-        {
-          "id": 48720273014976,
-          "title": "15L Tin Can",
-          "clean_title": "5L Tin",
-          "price": 5500.0,
-          "volume": 15.0,
-          "ppl": 366.6666666666667,
-          "available": true,
-          "is_primary": false,
-          "rank": 1
-        },
-        {
-          "id": 48996298162368,
-          "title": "5L can",
-          "clean_title": "5L Pack",
-          "price": 1920.0,
-          "volume": 5.0,
-          "ppl": 384.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 2
-        },
-        {
-          "id": 43150198767808,
-          "title": "1L plastic bottle",
-          "clean_title": "1L plastic bottle",
-          "price": 400.0,
-          "volume": 1.0,
-          "ppl": 400.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 3
-        },
-        {
-          "id": 44283936637120,
-          "title": "2L can",
-          "clean_title": "2L Bottle",
-          "price": 845.0,
-          "volume": 2.0,
-          "ppl": 422.5,
-          "available": true,
-          "is_primary": false,
-          "rank": 4
-        },
-        {
-          "id": 49027281060032,
-          "title": "5L tin can",
-          "clean_title": "5L Tin",
-          "price": 2175.0,
-          "volume": 5.0,
-          "ppl": 435.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 5
-        }
-      ],
-      "available": true,
-      "title": "1L glass bottle"
-    },
-    "coconut": {
-      "url": "https://www.anveshan.farm/products/wood-pressed-coconut-oil",
-      "scraped_at": "2026-10-16T03:41:35.456642",
-      "price_1l": 1050.0,
-      "variants": [
-        {
-          "id": 43150198833344,
-          "title": "1L plastic bottle",
-          "clean_title": "1L plastic bottle",
-          "price": 950.0,
-          "volume": 1.0,
-          "ppl": 950.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 1
-        },
-        {
-          "id": 48996306518208,
-          "title": "2L can",
-          "clean_title": "2L Bottle",
-          "price": 2050.0,
-          "volume": 2.0,
-          "ppl": 1025.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 2
-        },
-        {
-          "id": 44522444128448,
-          "title": "500ml Jar",
-          "clean_title": "500ml",
-          "price": 600.0,
-          "volume": 0.5,
-          "ppl": 1200.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 4
-        }
-      ],
-      "available": true,
-      "title": "1L glass bottle"
-    },
-    "sesame": {
-      "url": "https://www.anveshan.farm/products/wood-pressed-black-sesame-oil",
-      "scraped_at": "2026-10-16T03:41:35.846985",
-      "price_1l": 750.0,
-      "variants": [
-        {
-          "id": 43851230085312,
-          "title": "5L can",
-          "clean_title": "5L Pack",
-          "price": 3000.0,
-          "volume": 5.0,
-          "ppl": 600.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 1
-        },
-        {
-          "id": 48703044976832,
-          "title": "2L can",
-          "clean_title": "2L Bottle",
-          "price": 1250.0,
-          "volume": 2.0,
-          "ppl": 625.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 2
-        },
-        {
-          "id": 43150198800576,
-          "title": "1L plastic bottle",
-          "clean_title": "1L plastic bottle",
-          "price": 645.0,
-          "volume": 1.0,
-          "ppl": 645.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 3
-        }
-      ],
-      "available": true,
-      "title": "1L glass bottle"
-    },
-    "sunflower": {
-      "url": "https://www.anveshan.farm/products/sunflower-oil",
-      "scraped_at": "2026-10-16T03:41:36.368302",
-      "price_1l": 580.0,
-      "variants": [
-        {
-          "id": 43844706795712,
-          "title": "5L can",
-          "clean_title": "5L Pack",
-          "price": 2150.0,
-          "volume": 5.0,
-          "ppl": 430.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 1
-        },
-        {
-          "id": 43077260640448,
-          "title": "2L can",
-          "clean_title": "2L Bottle",
-          "price": 925.0,
-          "volume": 2.0,
-          "ppl": 462.5,
-          "available": true,
-          "is_primary": false,
-          "rank": 2
-        },
-        {
-          "id": 43077260673216,
-          "title": "5L tin can",
-          "clean_title": "5L Tin",
-          "price": 2375.0,
-          "volume": 5.0,
-          "ppl": 475.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 3
-        },
-        {
-          "id": 43150198735040,
-          "title": "1L plastic bottle",
-          "clean_title": "1L plastic bottle",
-          "price": 475.0,
-          "volume": 1.0,
-          "ppl": 475.0,
-          "available": true,
-          "is_primary": false,
-          "rank": 4
-        }
-      ],
-      "available": true,
-      "title": "1L glass bottle"
-    }
-  },
+  "anveshan": {},
   "gramiyaa": {
     "groundnut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-groundnut-oil",
-      "scraped_at": "2026-10-16T03:41:36.898155",
+      "scraped_at": "2026-10-17T03:31:30.271220",
       "price_1l": 428.0,
       "variants": [
         {
@@ -311,7 +45,7 @@
     },
     "mustard": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-mustard-oil",
-      "scraped_at": "2026-10-16T03:41:37.417250",
+      "scraped_at": "2026-10-17T03:31:30.817325",
       "price_1l": 388.0,
       "variants": [
         {
@@ -353,7 +87,7 @@
     },
     "coconut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-coconut-oil",
-      "scraped_at": "2026-10-16T03:41:37.960000",
+      "scraped_at": "2026-10-17T03:31:31.346564",
       "price_1l": 810.0,
       "variants": [
         {
@@ -395,7 +129,7 @@
     },
     "sesame": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-sesame-oil",
-      "scraped_at": "2026-10-16T03:41:38.462121",
+      "scraped_at": "2026-10-17T03:31:31.908255",
       "price_1l": 610.0,
       "variants": [
         {
@@ -439,7 +173,7 @@
   "twobrothers": {
     "groundnut": {
       "url": "https://twobrothersindiashop.com/products/wood-pressed-organic-groundnut-peanut-oil-1litre-bottle",
-      "scraped_at": "2026-10-16T03:41:38.990118",
+      "scraped_at": "2026-10-17T03:31:32.617251",
       "price_1l": 465.0,
       "variants": [
         {
@@ -481,7 +215,7 @@
     },
     "mustard": {
       "url": "https://twobrothersindiashop.com/products/black-mustard-oil",
-      "scraped_at": "2026-10-16T03:41:39.486963",
+      "scraped_at": "2026-10-17T03:31:33.069971",
       "price_1l": 425.0,
       "variants": [
         {
@@ -512,7 +246,7 @@
     },
     "coconut": {
       "url": "https://twobrothersindiashop.com/products/coconut-oil-wood-pressed-unrefined",
-      "scraped_at": "2026-10-16T03:41:40.095706",
+      "scraped_at": "2026-10-17T03:31:33.620252",
       "price_1l": 945.0,
       "variants": [
         {
@@ -532,7 +266,7 @@
     },
     "sunflower": {
       "url": "https://twobrothersindiashop.com/products/sunflower-oil",
-      "scraped_at": "2026-10-16T03:41:40.581217",
+      "scraped_at": "2026-10-17T03:31:34.169567",
       "price_1l": 445.0,
       "variants": [
         {
