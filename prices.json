@@ -3,7 +3,7 @@
   "gramiyaa": {
     "groundnut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-groundnut-oil",
-      "scraped_at": "2026-10-21T03:49:02.992482",
+      "scraped_at": "2026-10-22T03:48:48.868277",
       "price_1l": 428.0,
       "variants": [
         {
@@ -45,7 +45,7 @@
     },
     "mustard": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-mustard-oil",
-      "scraped_at": "2026-10-21T03:49:03.603594",
+      "scraped_at": "2026-10-22T03:48:49.598519",
       "price_1l": 388.0,
       "variants": [
         {
@@ -87,7 +87,7 @@
     },
     "coconut": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-coconut-oil",
-      "scraped_at": "2026-10-21T03:49:04.151142",
+      "scraped_at": "2026-10-22T03:48:50.331674",
       "price_1l": 810.0,
       "variants": [
         {
@@ -129,7 +129,7 @@
     },
     "sesame": {
       "url": "https://gramiyaa.com/products/oils-wood-cold-pressed-sesame-oil",
-      "scraped_at": "2026-10-21T03:49:04.747785",
+      "scraped_at": "2026-10-22T03:48:50.957281",
       "price_1l": 610.0,
       "variants": [
         {
@@ -173,7 +173,7 @@
   "twobrothers": {
     "groundnut": {
       "url": "https://twobrothersindiashop.com/products/wood-pressed-organic-groundnut-peanut-oil-1litre-bottle",
-      "scraped_at": "2026-10-21T03:49:05.333897",
+      "scraped_at": "2026-10-22T03:48:52.015622",
       "price_1l": 465.0,
       "variants": [
         {
@@ -199,6 +199,17 @@
           "rank": 2
         },
         {
+          "id": 50688516391074,
+          "title": "Tin Can - 10 Ltr",
+          "clean_title": "Tin Can - 10 Ltr",
+          "price": 4390.0,
+          "volume": 10.0,
+          "ppl": 439.0,
+          "available": true,
+          "is_primary": false,
+          "rank": 3
+        },
+        {
           "id": 39685016453282,
           "title": "Tin Can - 2 Ltr",
           "clean_title": "2L Tin",
@@ -207,7 +218,7 @@
           "ppl": 447.5,
           "available": true,
           "is_primary": false,
-          "rank": 3
+          "rank": 4
         }
       ],
       "available": true,
@@ -215,7 +226,7 @@
     },
     "mustard": {
       "url": "https://twobrothersindiashop.com/products/black-mustard-oil",
-      "scraped_at": "2026-10-21T03:49:05.865455",
+      "scraped_at": "2026-10-22T03:48:52.602571",
       "price_1l": 425.0,
       "variants": [
         {
@@ -239,6 +250,17 @@
           "available": true,
           "is_primary": false,
           "rank": 2
+        },
+        {
+          "id": 50688634683554,
+          "title": "10L Tin Can",
+          "clean_title": "10L Tin Can",
+          "price": 4130.0,
+          "volume": 10.0,
+          "ppl": 413.0,
+          "available": true,
+          "is_primary": false,
+          "rank": 3
         }
       ],
       "available": true,
@@ -246,7 +268,7 @@
     },
     "coconut": {
       "url": "https://twobrothersindiashop.com/products/coconut-oil-wood-pressed-unrefined",
-      "scraped_at": "2026-10-21T03:49:06.425329",
+      "scraped_at": "2026-10-22T03:48:53.132989",
       "price_1l": 945.0,
       "variants": [
         {
@@ -266,7 +288,7 @@
     },
     "sunflower": {
       "url": "https://twobrothersindiashop.com/products/sunflower-oil",
-      "scraped_at": "2026-10-21T03:49:07.263293",
+      "scraped_at": "2026-10-22T03:48:53.614910",
       "price_1l": 445.0,
       "variants": [
         {
